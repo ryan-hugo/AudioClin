@@ -13,6 +13,7 @@ O site foi criado com foco na experiência do usuário, acessibilidade e respons
 - **JavaScript**: Interatividade e animações
 - **FontAwesome**: Biblioteca de ícones
 - **Google Fonts**: Fontes Inter e Poppins
+- **Favicon**: Logo da empresa como ícone do site
 
 ## 🌟 Principais Características
 
@@ -43,8 +44,33 @@ O site foi criado com foco na experiência do usuário, acessibilidade e respons
 
 - **index.html**: Estrutura principal do site
 - **styles.css**: Estilos CSS organizados por seções
+- **seo.css**: Estilos específicos para otimização e acessibilidade
 - **script.js**: Funcionalidades interativas
 - **logo.webp**: Logo da empresa em formato otimizado
+- **sitemap.xml**: Mapa do site para indexação em motores de busca
+- **robots.txt**: Instruções para crawlers de motores de busca
+- **manifest.json**: Configuração para Progressive Web App (PWA)
+- **.htaccess**: Configurações de servidor para desempenho e SEO
+
+## 🔍 Otimizações de SEO e Acessibilidade
+
+### SEO (Search Engine Optimization)
+- **Metadados**: Implementação completa de meta tags para melhor indexação
+- **Schema.org**: Dados estruturados JSON-LD para exibição de rich snippets no Google
+- **Sitemap**: Arquivo XML para facilitar a indexação do site
+- **Robots.txt**: Orientações para crawlers de motores de busca
+- **Otimização de imagens**: Uso de formatos modernos (webp) e atributos de dimensão
+- **Canonical URLs**: Prevenção de conteúdo duplicado
+- **Analytics**: Integração com Google Analytics 4 e Google Tag Manager
+- **Performance**: Otimizações de cache e compressão via .htaccess
+
+### Acessibilidade
+- **Estrutura semântica**: Uso adequado de elementos HTML5
+- **ARIA**: Implementação de atributos ARIA para melhor navegação por leitores de tela
+- **Contraste de cores**: Garantia de legibilidade para usuários com deficiências visuais
+- **Navegação por teclado**: Suporte completo para navegação sem mouse
+- **Skip to content**: Link para pular direto ao conteúdo principal
+- **Textos alternativos**: Descrições detalhadas para imagens e elementos não-textuais
 
 ## 🎨 Paleta de Cores
 

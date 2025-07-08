@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Favicon - AudioClin</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        h1 {
+            color: #1a237e;
+        }
+        .steps {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        button {
+            background: linear-gradient(135deg, #1a237e 0%, #4a7dde 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .download-area {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Favicon para AudioClin</h1>
+    
+    <p>Esta página auxilia na criação de favicons para o site da AudioClin.</p>
+    
+    <div class="steps">
+        <h2>Opção 1: Usando esta ferramenta</h2>
+        <p>Clique no botão abaixo para gerar e baixar um favicon básico a partir do logo.webp:</p>
+        
+        <div class="download-area">
+            <button onclick="createFavicon()">Gerar Favicon</button>
+            <div id="download-link"></div>
+        </div>
+        
+        <p><strong>Limitação:</strong> Este método cria apenas um favicon.ico simples. Para uma solução mais completa, use a opção 2.</p>
+    </div>
+    
+    <div class="steps">
+        <h2>Opção 2: Usando ferramenta online profissional (Recomendada)</h2>
+        <ol>
+            <li>Acesse <a href="https://realfavicongenerator.net/" target="_blank">RealFaviconGenerator</a></li>
+            <li>Faça upload do arquivo logo.webp</li>
+            <li>Configure as opções para diferentes plataformas (iOS, Android, Windows, etc.)</li>
+            <li>Baixe o pacote de favicon gerado</li>
+            <li>Extraia os arquivos para a pasta raiz do site AudioClin</li>
+            <li>Substitua as tags de favicon no &lt;head&gt; do index.html pelo código HTML fornecido pelo site</li>
+        </ol>
+    </div>
+    
+    <div class="steps">
+        <h2>Opção 3: Integrar com HTML existente</h2>
+        <p>Se você já tiver um favicon.ico, adicione as seguintes linhas ao &lt;head&gt; do seu HTML:</p>
+        <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+    </div>
+    
+    <script>
+        function createFavicon() {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous';
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                canvas.width = 32;
+                canvas.height = 32;
+                
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, 32, 32);
+                
+                const dataURL = canvas.toDataURL('image/png');
+                
+                const link = document.createElement('a');
+                link.download = 'favicon.ico';
+                link.href = dataURL;
+                link.textContent = 'Download Favicon';
+                link.style.display = 'block';
+                link.style.margin = '15px 0';
+                link.style.fontWeight = 'bold';
+                
+                const downloadArea = document.getElementById('download-link');
+                downloadArea.innerHTML = '';
+                downloadArea.appendChild(link);
+                
+                const instructions = document.createElement('p');
+                instructions.textContent = 'Após o download, coloque o arquivo na pasta raiz do site.';
+                downloadArea.appendChild(instructions);
+            };
+            
+            img.src = 'logo.webp';
+        }
+    </script>
+</body>
+</html>

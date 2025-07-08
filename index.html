@@ -3,28 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AudioClin - Centro Clínico de Diagnósticos e Reabilitação Auditiva</title>
+    <title>AudioClin - Centro Clínico de Diagnósticos e Reabilitação Auditiva em Porto Velho</title>
+    
+    <!-- Meta tags SEO principais -->
+    <meta name="description" content="Centro Clínico especializado em fonoaudiologia, audiometria e reabilitação auditiva em Porto Velho/RO. Conveniado com Unimed, mais de 20 anos de experiência.">
+    <meta name="keywords" content="audioclin, fonoaudiologia, audiologia, aparelhos auditivos, exames auditivos, reabilitação auditiva, porto velho, rondônia, otorrinolaringologia">
+    <meta name="author" content="AudioClin">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://audioclin.com.br/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="logo.webp" type="image/webp">
+    <link rel="shortcut icon" href="logo.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="logo.webp">
+    <meta name="theme-color" content="#1a237e">
+    <meta name="msapplication-TileImage" content="logo.webp">
+    <meta name="msapplication-TileColor" content="#1a237e">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Metadados para SEO e compartilhamento social -->
+    <meta property="og:title" content="AudioClin - Centro Clínico de Diagnósticos e Reabilitação Auditiva">
+    <meta property="og:description" content="Centro especializado em fonoaudiologia, audiometria e tratamentos auditivos com mais de 20 anos de experiência em Porto Velho/RO.">
+    <meta property="og:image" content="https://audioclin.com.br/logo.webp">
+    <meta property="og:image:alt" content="Logo da AudioClin">
+    <meta property="og:url" content="https://audioclin.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AudioClin">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AudioClin - Centro de Reabilitação Auditiva em Porto Velho/RO">
+    <meta name="twitter:description" content="Centro especializado em diagnósticos e reabilitação auditiva em Porto Velho/RO. Agende sua consulta!">
+    <meta name="twitter:image" content="https://audioclin.com.br/logo.webp">
+    <meta name="twitter:image:alt" content="Logo da AudioClin">
+    
+    <!-- Dados estruturados Schema.org (JSON-LD) para informações de negócio local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "AudioClin",
+        "description": "Centro Clínico de Diagnósticos e Reabilitação Auditiva",
+        "url": "https://audioclin.com.br/",
+        "logo": "https://audioclin.com.br/logo.webp",
+        "image": "https://audioclin.com.br/logo.webp",
+        "telephone": "+556932237924",
+        "email": "audioclingerencia@gmail.com",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Dom Pedro II, 1962, Sala A",
+            "addressLocality": "Porto Velho",
+            "addressRegion": "RO",
+            "postalCode": "76804-116",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-8.7611780",
+            "longitude": "-63.9067750"
+        },
+        "sameAs": [
+            "https://www.facebook.com/audioclin",
+            "https://www.instagram.com/audioclin"
+        ],
+        "healthcareReportingData": {
+            "healthcareCertifications": [
+                "Conselho Federal de Fonoaudiologia"
+            ]
+        },
+        "specialties": [
+            "Fonoaudiologia", 
+            "Audiometria", 
+            "Aparelhos Auditivos", 
+            "Reabilitação Auditiva", 
+            "Terapia Ocupacional"
+        ],
+        "acceptedInsurance": [
+            "Unimed"
+        ]
+    }
+    </script>
+    
+    <!-- Dados estruturados Schema.org para Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://audioclin.com.br/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Sobre",
+                "item": "https://audioclin.com.br/#sobre"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Serviços",
+                "item": "https://audioclin.com.br/#servicos"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Contato",
+                "item": "https://audioclin.com.br/#contato"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Preload para recursos críticos -->
+    <link rel="preload" href="logo.webp" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Estilos e fontes -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="seo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Botão de pular para o conteúdo principal - melhoria de acessibilidade -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
+    
     <!-- Header/Hero Section -->
-    <header class="navbar">
+    <header class="navbar" role="banner">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="logo.webp" alt="AudioClin Logo" class="logo-img" />
+            <a href="index.html" class="logo" aria-label="AudioClin Página Inicial">
+                <img src="logo.webp" alt="AudioClin - Centro Clínico de Diagnósticos e Reabilitação Auditiva" class="logo-img" width="150" height="60" />
             </a>
             <button class="menu-toggle" aria-label="Abrir menu" title="Abrir menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <nav class="nav-menu">
+            <nav class="nav-menu" role="navigation" aria-label="Menu principal">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home" aria-label="Ir para seção Início">Início</a></li>
+                    <li><a href="#sobre" aria-label="Ir para seção Sobre a AudioClin">Sobre</a></li>
+                    <li><a href="#servicos" aria-label="Ir para seção Serviços">Serviços</a></li>
+                    <li><a href="#porqueescolher" aria-label="Ir para seção Diferenciais">Diferenciais</a></li>
+                    <li><a href="#contato" aria-label="Ir para seção Contato">Contato</a></li>
                 </ul>
                 <a href="tel:+556932237924" class="phone-btn">
                     <i class="fas fa-phone"></i>
@@ -38,14 +170,15 @@
         </div>
     </header>
 
+    <main id="main-content">
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="container">
                 <div class="hero-text">
-                    <h1 class="hero-title">Centro Clínico de Diagnósticos e Reabilitação Auditiva</h1>
-                    <p class="hero-subtitle">Cuidado integral para seu bem-estar com mais de 20 anos de experiência</p>
+                    <h1 class="hero-title">AudioClin: Centro Clínico de Diagnósticos e Reabilitação Auditiva em Porto Velho</h1>
+                    <p class="hero-subtitle">Cuidado integral para seu bem-estar auditivo com mais de 20 anos de experiência</p>
                     <div class="hero-buttons">
-                        <a href="https://wa.me/556999233814" class="btn btn-primary" target="_blank">
+                        <a href="https://wa.me/5569322379249" class="btn btn-primary" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             Agendar via WhatsApp
                         </a>
@@ -60,16 +193,17 @@
     </section>
 
     <!-- Sobre Section -->
-    <section class="about" id="sobre">
+    <section class="about" id="sobre" role="region" aria-labelledby="sobre-heading">
         <div class="container">
             <div class="section-header">
-                <h2>Sobre a AudioClin</h2>
+                <h2 id="sobre-heading">Sobre a AudioClin</h2>
                 <p>Comprometidos com a excelência no atendimento desde 2003</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>A AudioClin é um centro clínico especializado em diagnósticos e reabilitação auditiva, oferecendo atendimento multidisciplinar com foco na qualidade de vida dos nossos pacientes.</p>
-                    <p>Com mais de duas décadas de experiência, nossa equipe de profissionais qualificados está preparada para oferecer o melhor cuidado em fonoaudiologia, terapia ocupacional e consultas médicas especializadas.</p>
+                    <p>A AudioClin é um centro clínico especializado em <strong>diagnósticos e reabilitação auditiva em Porto Velho</strong>, oferecendo atendimento multidisciplinar com foco na qualidade de vida dos nossos pacientes. Nossos serviços incluem avaliação completa da audição, adaptação de aparelhos auditivos de última geração e terapia fonoaudiológica especializada.</p>
+                    <p>Com mais de duas décadas de experiência no mercado de <strong>saúde auditiva em Rondônia</strong>, nossa equipe de profissionais qualificados está preparada para oferecer o melhor cuidado em fonoaudiologia, terapia ocupacional e consultas médicas especializadas, atendendo desde bebês até idosos.</p>
+                    <p>Atuamos no diagnóstico e tratamento de perda auditiva, zumbido (tinnitus), audiometria tonal e vocal, impedanciometria, entre outros exames específicos para mapeamento completo da saúde auditiva.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
@@ -90,43 +224,58 @@
     </section>
 
     <!-- Serviços Section -->
-    <section class="services" id="servicos">
+    <section class="services" id="servicos" role="region" aria-labelledby="servicos-heading">
         <div class="container">
             <div class="section-header">
-                <h2>Nossos Serviços</h2>
+                <h2 id="servicos-heading">Nossos Serviços</h2>
                 <p>Atendimento especializado e personalizado para cada necessidade</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" id="service-fonoaudiologia">
+                    <div class="service-icon" aria-hidden="true">
                         <i class="fas fa-ear-listen"></i>
                     </div>
                     <h3>Fonoaudiologia</h3>
-                    <p>Diagnóstico e tratamento de distúrbios da comunicação, audição, voz e linguagem.</p>
+                    <p>Diagnóstico e tratamento especializado de distúrbios da comunicação, audição, voz e linguagem. Realizamos exames completos de audiometria, impedanciometria e avaliação do processamento auditivo.</p>
+                    <ul class="service-list">
+                        <li>Audiometria tonal e vocal</li>
+                        <li>Avaliação e terapia de linguagem</li>
+                        <li>Adaptação de aparelhos auditivos</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" id="service-terapia-ocupacional">
+                    <div class="service-icon" aria-hidden="true">
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3>Terapia Ocupacional</h3>
-                    <p>Atendimento individual e grupal, avaliação do desempenho ocupacional e estimulação visual.</p>
+                    <p>Atendimento individual e grupal, avaliação do desempenho ocupacional e estimulação visual. Desenvolvemos programas personalizados para melhorar a qualidade de vida e autonomia.</p>
+                    <ul class="service-list">
+                        <li>Reabilitação cognitiva</li>
+                        <li>Terapia de integração sensorial</li>
+                        <li>Adequação de ambiente para acessibilidade auditiva</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" id="service-consultas">
+                    <div class="service-icon" aria-hidden="true">
                         <i class="fas fa-stethoscope"></i>
                     </div>
-                    <h3>Consultas Médicas</h3>
-                    <p>Atendimento médico ambulatorial especializado com foco em diagnósticos precisos.</p>
+                    <h3>Consultas Especializadas</h3>
+                    <p>Atendimento médico ambulatorial especializado com foco em diagnósticos precisos. Nossa equipe inclui especialistas em otorrinolaringologia e audiologia para cuidado integral.</p>
+                    <ul class="service-list">
+                        <li>Avaliação otorrinolaringológica</li>
+                        <li>Diagnóstico de perdas auditivas</li>
+                        <li>Tratamento de zumbido (tinnitus)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Diferenciais Section -->
-    <section class="differentials">
+    <section class="differentials" id="porqueescolher" role="region" aria-labelledby="diferenciais-heading">
         <div class="container">
             <div class="section-header">
-                <h2>Por que escolher a AudioClin?</h2>
+                <h2 id="diferenciais-heading">Por que escolher a AudioClin?</h2>
             </div>
             <div class="differentials-grid">
                 <div class="differential-item">
@@ -154,10 +303,10 @@
     </section>
 
     <!-- Contato Section -->
-    <section class="contact" id="contato">
+    <section class="contact" id="contato" role="region" aria-labelledby="contato-heading">
         <div class="container">
             <div class="section-header">
-                <h2>Entre em Contato</h2>
+                <h2 id="contato-heading">Entre em Contato</h2>
                 <p>Estamos prontos para atendê-lo</p>
             </div>
             <div class="contact-content">
@@ -183,7 +332,7 @@
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <h4>WhatsApp</h4>
-                            <p><a href="https://wa.me/556999233814" target="_blank">(69) 99233-8147</a></p>
+                            <p><a href="https://wa.me/5569322379249" target="_blank">(69) 3223-7924</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -203,12 +352,14 @@
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Localização da AudioClin - Rua Dom Pedro II, 1962, Sala A">
+                        title="Localização da AudioClin - Rua Dom Pedro II, 1962, Sala A, Nossa Senhora das Graças, Porto Velho/RO"
+                        aria-label="Mapa mostrando a localização da AudioClin na Rua Dom Pedro II, 1962, Sala A, bairro Nossa Senhora das Graças em Porto Velho, Rondônia">
                     </iframe>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -223,12 +374,12 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="footer-logo">
-                        <img src="logo.webp" alt="AudioClin Logo" class="footer-logo-img" />
+                        <img src="logo.webp" alt="AudioClin - Centro Clínico de Diagnósticos e Reabilitação Auditiva" class="footer-logo-img" width="50" height="50" />
                         <h3>AudioClin</h3>
                     </div>
                     <p class="footer-description">Centro Clínico de Diagnósticos e Reabilitação Auditiva com mais de 20 anos de experiência em cuidados auditivos especializados.</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/556999233814" target="_blank" aria-label="WhatsApp" class="social-link">
+                        <a href="https://wa.me/5569322379249" target="_blank" aria-label="WhatsApp" class="social-link">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <a href="tel:+556932237924" aria-label="Telefone" class="social-link">
@@ -245,7 +396,7 @@
                         <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
                         <li><a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
                         <li><a href="#servicos"><i class="fas fa-stethoscope"></i> Serviços</a></li>
-                        <li><a href="#diferenciais"><i class="fas fa-star"></i> Diferenciais</a></li>
+                        <li><a href="#porqueescolher"><i class="fas fa-star"></i> Diferenciais</a></li>
                         <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
                     </ul>
                 </div>
@@ -276,7 +427,7 @@
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
                         <div>
-                            <p><a href="https://wa.me/556999233814" target="_blank">WhatsApp</a></p>
+                            <p><a href="https://wa.me/5569322379249" target="_blank">WhatsApp</a></p>
                         </div>
                     </div>
                 </div>
@@ -300,6 +451,25 @@
         </button>
     </div>
     <script src="script.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXX');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXX');
+    </script>
 </body>
 </html>
 

@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll para links de navegação
     const links = document.querySelectorAll('a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
     
     links.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -10,11 +11,33 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
+            // Referência ao menu mobile
+            const navMenu = document.querySelector('.nav-menu');
+            
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                // Verificar se o menu mobile está aberto
+                const menuIsOpen = navMenu && navMenu.classList.contains('active');
+                
+                if (menuIsOpen) {
+                    // Primeiro fechar o menu mobile
+                    document.querySelector('.menu-toggle').classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                    
+                    // Dar um pequeno delay para que o menu se feche antes de rolar
+                    setTimeout(() => {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 150);
+                } else {
+                    // Se o menu não estiver aberto, simplesmente rolar para a seção
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
     });
@@ -105,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Botão de WhatsApp flutuante (opcional)
     const createFloatingWhatsApp = () => {
         const whatsappBtn = document.createElement('a');
-        whatsappBtn.href = 'https://wa.me/556999233814';
+        whatsappBtn.href = 'https://wa.me/5569322379249';
         whatsappBtn.target = '_blank';
         whatsappBtn.className = 'floating-whatsapp';
         whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
@@ -165,28 +188,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     
     function toggleMenu() {
-        console.log('Toggle menu clicked');
+        // Verificar se os elementos existem antes de manipulá-los
+        if (!menuToggle || !navMenu) return;
+        
         menuToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
         body.classList.toggle('menu-open');
         
-        // Verificação para depuração
-        console.log('Menu active:', navMenu.classList.contains('active'));
-        
         // Mudança do ícone do menu com animação suave
         const icon = menuToggle.querySelector('i');
-        if (navMenu.classList.contains('active')) {
-            icon.style.transform = 'rotate(90deg)';
-            setTimeout(() => {
-                icon.className = 'fas fa-times';
-                icon.style.transform = 'rotate(0deg)';
-            }, 150);
-        } else {
-            icon.style.transform = 'rotate(90deg)';
-            setTimeout(() => {
-                icon.className = 'fas fa-bars';
-                icon.style.transform = 'rotate(0deg)';
-            }, 150);
+        if (icon) {
+            if (navMenu.classList.contains('active')) {
+                icon.style.transform = 'rotate(90deg)';
+                setTimeout(() => {
+                    icon.className = 'fas fa-times';
+                    icon.style.transform = 'rotate(0deg)';
+                }, 150);
+            } else {
+                icon.style.transform = 'rotate(90deg)';
+                setTimeout(() => {
+                    icon.className = 'fas fa-bars';
+                    icon.style.transform = 'rotate(0deg)';
+                }, 150);
+            }
         }
     }
     
@@ -198,11 +222,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Fechar menu ao clicar em um link (para navegação suave)
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
+    // Adicionamos tratamento específico para links de navegação móvel
+    const mobileNavLinks = document.querySelectorAll('.nav-menu ul li a[href^="#"]');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Certifique-se de que fechamos o menu quando um link é clicado
+            if (window.innerWidth <= 900 && navMenu && navMenu.classList.contains('active')) {
                 toggleMenu();
             }
         });
@@ -210,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Fechar menu ao redimensionar janela (para evitar problemas de layout)
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 900 && navMenu.classList.contains('active')) {
+        if (window.innerWidth > 900 && navMenu && navMenu.classList.contains('active')) {
             toggleMenu();
         }
     });
@@ -236,12 +261,14 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
             const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+            if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
         
-        navLinks.forEach(link => {
+        // Certifique-se de que navLinks está definido
+        const allNavLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+        allNavLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === '#' + current) {
                 link.classList.add('active');
@@ -255,7 +282,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Efeito de ondulação nos links da navbar
-    navLinks.forEach(link => {
+    const menuLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+    menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
