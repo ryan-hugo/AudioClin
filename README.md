@@ -113,14 +113,20 @@ Não são necessárias dependências ou instalações adicionais, pois o projeto
 ## 📍 Localização
 
 AudioClin - Centro Clínico de Diagnósticos e Reabilitação Auditiva  
-Rua Dom Pedro II, 1962, Sala A  
-Nossa Senhora das Graças  
+Rua Dom Pedro II, 1962 - Nossa Senhora das Graças  
 Porto Velho/RO - CEP: 76804-116
 
 **Contato:**  
 Telefone: (69) 3223-7924  
-WhatsApp: (69) 9323-7924  
+WhatsApp: (69) 99233-8147  
 Email: audioclingerencia@gmail.com
+
+**Serviços Oferecidos:**  
+- Fonoaudiologia
+- Nutrição
+- Psicologia
+- Psicopedagogia
+- Aparelhos Auditivos
 
 ## 👤 Desenvolvido por
 
