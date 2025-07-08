@@ -119,7 +119,7 @@ Porto Velho/RO - CEP: 76804-116
 
 **Contato:**  
 Telefone: (69) 3223-7924  
-WhatsApp: (69) 99233-8147  
+WhatsApp: (69) 9323-7924  
 Email: audioclingerencia@gmail.com
 
 ## 👤 Desenvolvido por
